@@ -1,0 +1,80 @@
+text,intent
+"My sugar is high",reduce_glucose
+"My glucose level is high",reduce_glucose
+"I checked my sugar and it is high",reduce_glucose
+"My blood sugar increased today",reduce_glucose
+"I ate sweets and now my sugar is high",reduce_glucose
+"What should I do if my glucose is high?",reduce_glucose
+"My sugar reading was high yesterday",reduce_glucose
+"I feel tired and my sugar is high",reduce_glucose
+"My glucose is above normal",reduce_glucose
+"How can I reduce my blood sugar?",reduce_glucose
+"My sugar level went up",reduce_glucose
+"What can I do to lower my sugar?",reduce_glucose
+"I think my glucose is too high",reduce_glucose
+"My sugar result is high",reduce_glucose
+"How do I control high sugar?",reduce_glucose
+
+"What should I eat today?",diet_advice
+"Give me diet advice for diabetes",diet_advice
+"What food is good for diabetes?",diet_advice
+"Suggest a healthy diet",diet_advice
+"What can a diabetic eat?",diet_advice
+"Is rice good for diabetes?",diet_advice
+"What should I avoid eating?",diet_advice
+"Give me food recommendations",diet_advice
+"What is a healthy meal?",diet_advice
+"Can diabetics eat sugar?",diet_advice
+"What food should I avoid?",diet_advice
+"Suggest a diabetes friendly diet",diet_advice
+"What should I eat to stay healthy?",diet_advice
+"Recommend food for diabetes",diet_advice
+"What diet is best for diabetes?",diet_advice
+
+"Can I exercise today?",exercise_advice
+"What exercise is good for diabetes?",exercise_advice
+"Is walking good for diabetes?",exercise_advice
+"Should I exercise if I have diabetes?",exercise_advice
+"What physical activity is safe?",exercise_advice
+"Can I go to the gym?",exercise_advice
+"Suggest an exercise plan",exercise_advice
+"What workout is recommended?",exercise_advice
+"Is jogging safe for diabetes?",exercise_advice
+"How much exercise should I do?",exercise_advice
+"Can exercise lower sugar?",exercise_advice
+"What activity helps control sugar?",exercise_advice
+"Should I walk after meals?",exercise_advice
+"What exercises help diabetes?",exercise_advice
+"Is daily exercise important?",exercise_advice
+
+"Make a plan for today",daily_plan
+"Give me a daily health plan",daily_plan
+"What should I do today?",daily_plan
+"Create a routine for me",daily_plan
+"Give me a daily routine",daily_plan
+"Plan my day",daily_plan
+"Suggest a daily plan for diabetes",daily_plan
+"What should my day look like?",daily_plan
+"Create a healthy daily plan",daily_plan
+"Give me a schedule for today",daily_plan
+"Plan my activities for today",daily_plan
+"Make a daily lifestyle plan",daily_plan
+"What is a good daily routine?",daily_plan
+"Help me plan my day",daily_plan
+"Give me a daily action plan",daily_plan
+
+"What is diabetes?",general_info
+"Explain diabetes",general_info
+"Tell me about diabetes",general_info
+"What does diabetes mean?",general_info
+"Give information about diabetes",general_info
+"What causes diabetes?",general_info
+"What are the types of diabetes?",general_info
+"Explain diabetes briefly",general_info
+"Tell me basic info about diabetes",general_info
+"What is type 2 diabetes?",general_info
+"What is type 1 diabetes?",general_info
+"How does diabetes affect the body?",general_info
+"Give an overview of diabetes",general_info
+"What is diabetes disease?",general_info
+"Explain diabetes in simple words",general_info
