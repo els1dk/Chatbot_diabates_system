@@ -6,15 +6,27 @@ GENERAL_INFO_RESPONSES = [
     "Diabetes affects how the body uses glucose for energy."
 ]
 
-def generate_response(intent, plan):
+def generate_response(intent, plan, risk):
+    risk_prefix = ""
+    if risk == "high":
+        risk_prefix = "[ALERT: HIGH RISK] Consult a specialist. "
+    elif risk == "medium":
+        risk_prefix = "[NOTE: MEDIUM RISK] Monitor closely. "
+    else:
+        risk_prefix = "[LOW RISK] Good job! "
+
     if intent == "reduce_glucose":
-        return "To reduce your glucose level, you should: " + ", ".join(plan)
+        return f"{risk_prefix}To reduce your glucose level, consider this plan: " + ", ".join(plan)
 
     if intent == "diet_advice":
-        return "Diet advice: follow a balanced, low-sugar diet."
+        if risk == "high":
+            return f"{risk_prefix}Strictly low-carb, high-fiber diet is crucial."
+        return f"{risk_prefix}Diet advice: follow a balanced, low-sugar diet."
 
     if intent == "exercise_advice":
-        return "Exercise advice: regular moderate activity helps control sugar."
+        if risk == "high":
+            return f"{risk_prefix}Start with light walking and monitor signals."
+        return f"{risk_prefix}Exercise advice: regular moderate activity helps control sugar."
 
     if intent == "general_info":
         return random.choice(GENERAL_INFO_RESPONSES)

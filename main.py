@@ -7,6 +7,7 @@ from chatbot import generate_response
 
 
 # --------- Helper function ---------
+# --------- Helper function ---------
 def extract_glucose_state(text):
     text = text.lower()
     if "low" in text:
@@ -15,6 +16,25 @@ def extract_glucose_state(text):
         return "high"
     else:
         return "normal"
+
+
+def get_user_input():
+    print("\nPlease enter the following details for diabetes risk assessment:")
+    try:
+        pregnancies = float(input("Pregnancies: "))
+        glucose = float(input("Glucose: "))
+        blood_pressure = float(input("BloodPressure: "))
+        skin_thickness = float(input("SkinThickness: "))
+        insulin = float(input("Insulin: "))
+        bmi = float(input("BMI: "))
+        dpf = float(input("DiabetesPedigreeFunction: "))
+        age = float(input("Age: "))
+        
+        return np.array([[pregnancies, glucose, blood_pressure, skin_thickness, 
+                          insulin, bmi, dpf, age]])
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        return get_user_input()
 
 
 # --------- Train models ---------
@@ -28,15 +48,15 @@ intent_model, vectorizer, label_encoder = train_intent_model(
     "data/intents.csv"
 )
 
-# --------- Patient profile (example) ---------
-# This represents ONE patient and is evaluated using Kaggle-trained NN
-patient = np.array([[6, 148, 72, 35, 0, 33.6, 0.627, 50]])
+# --------- Patient profile (from user input) ---------
+patient = get_user_input()
 risk = get_risk_level(diabetes_model, scaler, patient)
 
 print("\nPredicted risk level from Kaggle-trained NN:", risk)
 
 
 # --------- Chat loop ---------
+print(f"\nExample: 'I want to reduce my glucose' or 'Give me diet advice'")
 while True:
     user_input = input("\nYou: ")
     if user_input.lower() == "exit":
@@ -58,10 +78,6 @@ while True:
     agent = DiabetesAgent(state)
     plan = agent.plan()
 
-    # Debug (optional – good for demo)
-    # print("DEBUG -> State:", glucose_state, "| Risk:", risk)
-    # print("DEBUG -> Plan:", plan)
-
     # 5. Generate chatbot response
-    response = generate_response(intent, plan)
+    response = generate_response(intent, plan, risk)
     print("Bot:", response)
