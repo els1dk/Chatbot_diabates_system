@@ -41,4 +41,5 @@ def predict_intent(model, vectorizer, label_encoder, sentence):
     vec = vectorizer.transform([sentence]).toarray()
     prediction = model.predict(vec)
     intent_index = np.argmax(prediction)
-    return label_encoder.inverse_transform([intent_index])[0]
+    confidence = np.max(prediction)
+    return label_encoder.inverse_transform([intent_index])[0], confidence

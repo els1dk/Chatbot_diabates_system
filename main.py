@@ -12,7 +12,7 @@ def extract_glucose_state(text):
     text = text.lower()
     if "low" in text:
         return "low"
-    elif "high" in text:
+    elif "high" in text or "reduce" in text:
         return "high"
     else:
         return "normal"
@@ -64,9 +64,12 @@ while True:
         break
 
     # 1. Predict intent
-    intent = predict_intent(
+    intent, confidence = predict_intent(
         intent_model, vectorizer, label_encoder, user_input
     )
+    
+    if confidence < 0.65:
+        intent = "fallback"
 
     # 2. Extract glucose state from user text
     glucose_state = extract_glucose_state(user_input)

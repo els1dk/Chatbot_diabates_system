@@ -78,3 +78,16 @@ text,intent
 "Give an overview of diabetes",general_info
 "What is diabetes disease?",general_info
 "Explain diabetes in simple words",general_info
+"Tell me about this condition",general_info
+"Medical definition of diabetes",general_info
+"How does the disease work?",general_info
+"Explanation of blood sugar condition",general_info
+"What is high blood sugar?",general_info
+"Define the medical term",general_info
+"I want to know more about the illness",general_info
+"Give me a schedule",daily_plan
+"Routine for the day",daily_plan
+"Daily schedule recommendation",daily_plan
+"My daily timetable",daily_plan
+"Help me organize my day",daily_plan
+"What should I do in the morning?",daily_plan
