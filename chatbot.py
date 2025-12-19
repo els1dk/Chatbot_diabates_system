@@ -53,6 +53,16 @@ def generate_response(intent, plan, risk):
     if intent == "general_info":
         return random.choice(GENERAL_INFO_RESPONSES)
 
+    if intent == "simulate":
+        return ("🔮 Simulation Mode Activated!\n\n"
+                "I can simulate different scenarios for you. Try asking:\n"
+                "• 'What if I walk daily?'\n"
+                "• 'What if I don't exercise?'\n"
+                "• 'What if I eat healthy?'\n"
+                "• 'What if I eat junk food?'\n"
+                "• 'What if I reduce stress?'\n\n"
+                "Type your scenario question!")
+
     if intent == "fallback":
         return "I'm not sure I understand. I can help with diet, exercise, or a daily plan. Could you please rephrase?"
 

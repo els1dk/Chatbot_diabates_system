@@ -91,3 +91,19 @@ text,intent
 "My daily timetable",daily_plan
 "Help me organize my day",daily_plan
 "What should I do in the morning?",daily_plan
+
+"What if I walk daily?",simulate
+"What if I exercise regularly?",simulate
+"What if I dont exercise?",simulate
+"What if I eat healthy?",simulate
+"What if I follow a strict diet?",simulate
+"What if I eat junk food?",simulate
+"What if I reduce stress?",simulate
+"Simulate walking every day",simulate
+"Show me what happens if I exercise",simulate
+"What happens if I stop exercising?",simulate
+"Predict if I eat better",simulate
+"What would happen if I change my diet?",simulate
+"Can you simulate a scenario?",simulate
+"Show me different outcomes",simulate
+"Compare scenarios",simulate
