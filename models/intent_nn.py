@@ -1,9 +1,11 @@
 import pandas as pd
 import numpy as np
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Dropout
+from keras.callbacks import EarlyStopping
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 
 
 def train_intent_model(csv_path):
@@ -18,12 +20,27 @@ def train_intent_model(csv_path):
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(labels)
 
-    vectorizer = TfidfVectorizer(max_features=1000, stop_words="english")
+    # Improved TF-IDF with better parameters
+    vectorizer = TfidfVectorizer(
+        max_features=500,  # Reduced features for small dataset
+        stop_words="english",
+        ngram_range=(1, 2),  # Include bigrams for better context
+        min_df=1,
+        max_df=0.9
+    )
     X = vectorizer.fit_transform(texts).toarray()
 
+    # Stratified split to ensure balanced validation set
+    X_train, X_val, y_train, y_val = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
+
+    # Improved model architecture
     model = Sequential()
-    model.add(Dense(16, input_shape=(X.shape[1],), activation="relu"))
-    model.add(Dense(8, activation="relu"))
+    model.add(Dense(32, input_shape=(X.shape[1],), activation="relu"))
+    model.add(Dropout(0.4))
+    model.add(Dense(16, activation="relu"))
+    model.add(Dropout(0.3))
     model.add(Dense(len(np.unique(y)), activation="softmax"))
 
     model.compile(
@@ -32,7 +49,16 @@ def train_intent_model(csv_path):
         metrics=["accuracy"]
     )
 
-    model.fit(X, y, epochs=50, batch_size=8, validation_split=0.2)
+    # Early stopping to prevent overfitting
+    early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+
+    # Train with more epochs but early stopping
+    model.fit(X_train, y_train, 
+              epochs=50, 
+              batch_size=8, 
+              validation_data=(X_val, y_val), 
+              callbacks=[early_stop],
+              verbose=1)
 
     return model, vectorizer, label_encoder
 

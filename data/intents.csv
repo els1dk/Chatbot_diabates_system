@@ -14,6 +14,26 @@ text,intent
 "I think my glucose is too high",reduce_glucose
 "My sugar result is high",reduce_glucose
 "How do I control high sugar?",reduce_glucose
+"I want to reduce my glucose",reduce_glucose
+"Help me lower my blood sugar",reduce_glucose
+"My glucose keeps rising",reduce_glucose
+"Sugar levels are concerning",reduce_glucose
+"Blood sugar is out of control",reduce_glucose
+"Need to bring down my glucose",reduce_glucose
+"My readings are too high",reduce_glucose
+"Glucose spike after eating",reduce_glucose
+"How to manage high blood sugar",reduce_glucose
+"Sugar is consistently elevated",reduce_glucose
+"My A1C is high",reduce_glucose
+"Hyperglycemia symptoms",reduce_glucose
+"Blood glucose management needed",reduce_glucose
+"Sugar control strategies",reduce_glucose
+"Reduce blood glucose naturally",reduce_glucose
+"Glucose management help",reduce_glucose
+"My blood sugar wont go down",reduce_glucose
+"High glucose emergency",reduce_glucose
+"Need to stabilize blood sugar",reduce_glucose
+"Glucose control urgently needed",reduce_glucose
 
 "What should I eat today?",diet_advice
 "Give me diet advice for diabetes",diet_advice
@@ -30,6 +50,26 @@ text,intent
 "What should I eat to stay healthy?",diet_advice
 "Recommend food for diabetes",diet_advice
 "What diet is best for diabetes?",diet_advice
+"Meal planning for diabetes",diet_advice
+"Best foods for blood sugar control",diet_advice
+"Can I eat carbs?",diet_advice
+"Low glycemic index foods",diet_advice
+"Diabetic meal suggestions",diet_advice
+"What snacks are safe?",diet_advice
+"Breakfast ideas for diabetes",diet_advice
+"Dinner recommendations",diet_advice
+"Lunch options for diabetics",diet_advice
+"Are fruits okay to eat?",diet_advice
+"Vegetable recommendations",diet_advice
+"Protein sources for diabetes",diet_advice
+"Can I eat bread?",diet_advice
+"Whole grains vs refined grains",diet_advice
+"Portion control tips",diet_advice
+"Nutrition advice for diabetes",diet_advice
+"Healthy eating habits",diet_advice
+"Food choices for better control",diet_advice
+"Diet to prevent complications",diet_advice
+"What oils are best?",diet_advice
 
 "Can I exercise today?",exercise_advice
 "What exercise is good for diabetes?",exercise_advice
@@ -46,6 +86,26 @@ text,intent
 "Should I walk after meals?",exercise_advice
 "What exercises help diabetes?",exercise_advice
 "Is daily exercise important?",exercise_advice
+"Best exercises for blood sugar",exercise_advice
+"Cardio or strength training?",exercise_advice
+"How often should I work out?",exercise_advice
+"Exercise intensity for diabetes",exercise_advice
+"Safe workout routines",exercise_advice
+"Can I do high intensity training?",exercise_advice
+"Yoga for diabetes",exercise_advice
+"Swimming benefits",exercise_advice
+"Cycling recommendations",exercise_advice
+"Exercise precautions",exercise_advice
+"When is the best time to exercise?",exercise_advice
+"Pre-workout meal suggestions",exercise_advice
+"Post-exercise blood sugar",exercise_advice
+"Exercise and insulin",exercise_advice
+"Activity level recommendations",exercise_advice
+"Fitness plan for diabetics",exercise_advice
+"Movement throughout the day",exercise_advice
+"Resistance training benefits",exercise_advice
+"Stretching and flexibility",exercise_advice
+"Active lifestyle tips",exercise_advice
 
 "Make a plan for today",daily_plan
 "Give me a daily health plan",daily_plan
@@ -62,6 +122,26 @@ text,intent
 "What is a good daily routine?",daily_plan
 "Help me plan my day",daily_plan
 "Give me a daily action plan",daily_plan
+"Help me organize my day",daily_plan
+"What should I do in the morning?",daily_plan
+"Give me a schedule",daily_plan
+"Routine for the day",daily_plan
+"Daily schedule recommendation",daily_plan
+"My daily timetable",daily_plan
+"Morning routine suggestions",daily_plan
+"Evening routine ideas",daily_plan
+"Daily diabetes management plan",daily_plan
+"Structured day plan",daily_plan
+"Time management for health",daily_plan
+"Daily habits to develop",daily_plan
+"Routine for better control",daily_plan
+"Organize my health activities",daily_plan
+"Daily checklist for diabetes",daily_plan
+"Step by step daily guide",daily_plan
+"Hourly schedule",daily_plan
+"Weekly routine planning",daily_plan
+"Lifestyle schedule",daily_plan
+"Daily wellness plan",daily_plan
 
 "What is diabetes?",general_info
 "Explain diabetes",general_info
@@ -85,12 +165,19 @@ text,intent
 "What is high blood sugar?",general_info
 "Define the medical term",general_info
 "I want to know more about the illness",general_info
-"Give me a schedule",daily_plan
-"Routine for the day",daily_plan
-"Daily schedule recommendation",daily_plan
-"My daily timetable",daily_plan
-"Help me organize my day",daily_plan
-"What should I do in the morning?",daily_plan
+"Diabetes symptoms",general_info
+"How is diabetes diagnosed?",general_info
+"What is insulin resistance?",general_info
+"Prediabetes information",general_info
+"Gestational diabetes",general_info
+"Diabetes complications",general_info
+"Long term effects",general_info
+"What is HbA1c?",general_info
+"Blood glucose monitoring",general_info
+"Diabetes statistics",general_info
+"Risk factors for diabetes",general_info
+"Diabetes prevention",general_info
+"Understanding blood sugar",general_info
 
 "What if I walk daily?",simulate
 "What if I exercise regularly?",simulate
@@ -107,3 +194,60 @@ text,intent
 "Can you simulate a scenario?",simulate
 "Show me different outcomes",simulate
 "Compare scenarios",simulate
+"What if I lose weight?",simulate
+"Predict my risk if I change habits",simulate
+"Simulate better lifestyle",simulate
+"What if I sleep more?",simulate
+"Show impact of daily walking",simulate
+"Compare exercise vs no exercise",simulate
+"What if I take medication regularly?",simulate
+"Simulate diet changes",simulate
+"What happens if I skip meals?",simulate
+"Predict outcome of healthy eating",simulate
+"What if I monitor glucose daily?",simulate
+"Simulate stress reduction",simulate
+"What if I quit smoking?",simulate
+"Show me lifestyle impact",simulate
+"Compare different scenarios",simulate
+"What if I drink more water?",simulate
+"Predict risk with exercise",simulate
+"Simulate weight loss effect",simulate
+"What if I eat smaller portions?",simulate
+"Show me the difference",simulate
+
+"thanks",acknowledgment
+"thank you",acknowledgment
+"ok",acknowledgment
+"okay",acknowledgment
+"yes",acknowledgment
+"no",acknowledgment
+"sure",acknowledgment
+"got it",acknowledgment
+"understood",acknowledgment
+"alright",acknowledgment
+"cool",acknowledgment
+"great",acknowledgment
+"nice",acknowledgment
+"appreciate it",acknowledgment
+"thats helpful",acknowledgment
+"that helps",acknowledgment
+"i see",acknowledgment
+"makes sense",acknowledgment
+"good to know",acknowledgment
+"noted",acknowledgment
+"bye",acknowledgment
+"goodbye",acknowledgment
+"see you",acknowledgment
+"later",acknowledgment
+"have a good day",acknowledgment
+"nope",acknowledgment
+"yep",acknowledgment
+"yup",acknowledgment
+"nah",acknowledgment
+"fine",acknowledgment
+"perfect",acknowledgment
+"awesome",acknowledgment
+"sounds good",acknowledgment
+"will do",acknowledgment
+"roger that",acknowledgment
+"copy that",acknowledgment
