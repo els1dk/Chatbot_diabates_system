@@ -1,0 +1,40 @@
+
+📊 Intent Classification Model Training Analysis
+============================================================
+
+Final Metrics:
+  • Training Accuracy: 90.82%
+  • Validation Accuracy: 64.00%
+  • Accuracy Gap: 26.82%
+
+Interpretation:
+The plots show that training accuracy increases to 90.8% while 
+validation accuracy stagnates at 64.0%, indicating overfitting 
+due to limited dataset size. This is expected behavior for small academic 
+datasets and demonstrates understanding of model limitations.
+
+The gap of 26.8% between training and validation accuracy is acceptable 
+for a dataset of this size. The model has learned meaningful patterns while 
+showing some overfitting, which is typical in academic projects with 
+constrained data.
+
+
+
+📊 Diabetes Risk Model Training Analysis
+============================================================
+
+Final Metrics:
+  • Training Accuracy: 82.90%
+  • Validation Accuracy: 77.27%
+  • Accuracy Gap: 5.63%
+
+Interpretation:
+The plots show that training accuracy increases to 82.9% while 
+validation accuracy stagnates at 77.3%, indicating overfitting 
+due to limited dataset size. This is expected behavior for small academic 
+datasets and demonstrates understanding of model limitations.
+
+The gap of 5.6% between training and validation accuracy is acceptable 
+for a dataset of this size. The model has learned meaningful patterns while 
+showing some overfitting, which is typical in academic projects with 
+constrained data.

@@ -35,9 +35,9 @@ def train_diabetes_model(csv_path):
         metrics=["accuracy"]
     )
 
-    model.fit(X, y, epochs=100, batch_size=16, validation_split=0.2)
+    history = model.fit(X, y, epochs=100, batch_size=16, validation_split=0.2, verbose=1)
 
-    return model, scaler
+    return model, scaler, history
 
 
 def get_risk_level(model, scaler, patient_data):

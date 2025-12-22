@@ -53,14 +53,14 @@ def train_intent_model(csv_path):
     early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
     # Train with more epochs but early stopping
-    model.fit(X_train, y_train, 
+    history = model.fit(X_train, y_train, 
               epochs=50, 
               batch_size=8, 
               validation_data=(X_val, y_val), 
               callbacks=[early_stop],
               verbose=1)
 
-    return model, vectorizer, label_encoder
+    return model, vectorizer, label_encoder, history
 
 
 def predict_intent(model, vectorizer, label_encoder, sentence):

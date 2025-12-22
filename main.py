@@ -163,12 +163,20 @@ def main():
     
     # Train models
     print("\n[1/2] Training diabetes risk prediction model...")
-    diabetes_model, scaler = train_diabetes_model(DIABETES_DATA_PATH)
+    diabetes_model, scaler, diabetes_history = train_diabetes_model(DIABETES_DATA_PATH)
     
     print("\n[2/2] Training intent classification model...")
-    intent_model, vectorizer, label_encoder = train_intent_model(INTENTS_DATA_PATH)
+    intent_model, vectorizer, label_encoder, intent_history = train_intent_model(INTENTS_DATA_PATH)
     
     print("\n✅ Models trained successfully!")
+    
+    # Generate training visualization plots (optional)
+    try:
+        from models.visualize import plot_both_models
+        plot_both_models(intent_history, diabetes_history)
+    except ImportError:
+        print("\n⚠️  Matplotlib not installed. Skipping visualization plots.")
+        print("   To generate plots, install matplotlib: pip install matplotlib")
     
     # Get patient data
     patient = get_user_input()
